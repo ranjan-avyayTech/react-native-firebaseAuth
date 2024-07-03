@@ -57,7 +57,7 @@ class AppwriteService {
 
     async login({ email, password }: LoginUserAccount) {
         try {
-            return await this.account.createEmailSession(email, password);
+            return await this.account.createEmailPasswordSession(email, password);
 
         } catch (error) {
             Snackbar.show({
